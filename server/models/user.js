@@ -2,7 +2,6 @@ import moment from "moment";
 import  mongoose  from "mongoose";
 
 // create Schema
-
 const UserSchema = new mongoose.Schema({
     name: {
         type : String,

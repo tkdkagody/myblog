@@ -1,12 +1,14 @@
 import mongoose from 'mongoose';
 import moment from 'moment';
 
+
+
 const PostSchema = new mongoose.Schema({
+
     title : {
         type: String,
         required: true, 
-        index: true,   //검색기능 향상 ? 
-        
+        index: true,   //검색기능 향상 ?     
     },
     contents : {
         type: String, 
@@ -38,10 +40,12 @@ const PostSchema = new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref: 'user' 
     }
+
 });
 
-const Post = mongoose.model('post', PostSchema)
 
-export default Post ;
+const Post = mongoose.model('post', PostSchema);
+
+export default Post;
 
 
